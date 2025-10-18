@@ -84,14 +84,23 @@ export default function ContactSection() {
             </div>
 
             <div className="flex gap-4">
-              <div className="p-4 rounded-lg bg-orange-400/20 h-fit">
-                <MapPin className="text-orange-400" size={24} />
-              </div>
-              <div>
-                <h3 className="text-white font-semibold mb-2">Location</h3>
-                <p className="text-gray-300">Salem, Tamil Nadu, India</p>
-              </div>
-            </div>
+  <div className="p-4 rounded-lg bg-orange-400/20 h-fit">
+    <MapPin className="text-orange-400" size={24} />
+  </div>
+  <div>
+    <h3 className="text-white font-semibold mb-2">Location</h3>
+    <p className="text-gray-300">
+      <a
+        href="https://www.google.com/maps?q=Vincent,+bus+stop,+13,+Cherry+Rd,+Salem,+Tamil+Nadu+636007"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-orange-400 transition-colors"
+      >
+        Vincent, bus stop, 13, Cherry Rd, Salem, Tamil Nadu 636007
+      </a>
+    </p>
+  </div>
+</div>
           </motion.div>
 
           {/* Contact Form */}
