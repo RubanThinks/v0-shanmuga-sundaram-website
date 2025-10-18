@@ -64,37 +64,4 @@ export default function Footer() {
       </div>
     </motion.footer>
   )
-}            <motion.a
-              href="mailto:sss.pvdr1@gmail.com"
-              whileHover={{ scale: 1.2, color: "#FF8C00" }}
-              className="text-gray-300 hover:text-orange-400 transition-colors duration-300"
-            >
-              <Mail size={24} />
-            </motion.a>
-          </div>
-
-          {/* Embedded Google Map */}
-          <div className="mt-6 w-full max-w-md">
-            <iframe
-              src="https://www.google.com/maps?q=141+Cherry+Road+Vincent+Salem+636007&output=embed"
-              width="100%"
-              height="200"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-
-          {/* Disclaimer */}
-          <p className="text-gray-400 text-sm text-center max-w-2xl mt-4">
-            Independent Star Health Insurance Executive — Not the official Star Health Insurance website.
-          </p>
-
-          {/* Copyright */}
-          <p className="text-gray-500 text-xs">© 2025 Mr. Shanmuga Sundaram S. All rights reserved.</p>
-        </div>
-      </div>
-    </motion.footer>
-  )
-}
+            }
