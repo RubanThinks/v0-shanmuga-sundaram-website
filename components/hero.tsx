@@ -11,9 +11,12 @@ function TypingText({ text }: { text: string }) {
   useEffect(() => {
     let index = 0
     const interval = setInterval(() => {
-      setDisplayedText((prev) => prev + text[index])
-      index++
-      if (index === text.length) clearInterval(interval)
+      if (index < text.length) {
+        setDisplayedText((prev) => prev + text[index])
+        index++
+      } else {
+        clearInterval(interval)
+      }
     }, 50) // typing speed in ms
 
     return () => clearInterval(interval)
