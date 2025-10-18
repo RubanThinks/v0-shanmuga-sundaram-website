@@ -35,7 +35,7 @@ export default function Navbar() {
                 MR. Shanmuga Sundaram
               </span>
               <span className="text-gray-300 text-xs md:text-sm">
-                Independent Star Health Insurance Executive
+                 Star Health Insurance Executive
               </span>
             </div>
           </motion.div>
