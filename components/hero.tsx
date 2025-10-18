@@ -2,6 +2,27 @@
 
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
+import { useEffect, useState } from "react"
+
+// TypingText Component
+function TypingText({ text }: { text: string }) {
+  const [displayedText, setDisplayedText] = useState("")
+
+  useEffect(() => {
+    let index = 0
+    const interval = setInterval(() => {
+      setDisplayedText((prev) => prev + text[index])
+      index++
+      if (index === text.length) clearInterval(interval)
+    }, 50) // typing speed in ms
+
+    return () => clearInterval(interval)
+  }, [text])
+
+  return (
+    <p className="text-base sm:text-xl text-gray-300 mb-4 leading-relaxed">{displayedText}</p>
+  )
+}
 
 export default function Hero() {
   const containerVariants = {
@@ -46,9 +67,7 @@ export default function Hero() {
 
         {/* Typing Tagline */}
         <motion.div variants={itemVariants} className="mb-8 px-2">
-          <p className="text-base sm:text-xl text-gray-300 mb-4 leading-relaxed">
-            Helping clients secure the best health insurance plans for over 10 years.
-          </p>
+          <TypingText text="Helping clients secure the best health insurance plans for over 10 years." />
         </motion.div>
 
         {/* Stats */}
@@ -97,4 +116,4 @@ export default function Hero() {
       </motion.div>
     </section>
   )
-          }
+}
