@@ -16,34 +16,48 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-8">
           {/* Social Icons */}
           <div className="flex gap-6">
-  <motion.a
-    href="https://www.instagram.com/shanmuga_sundaram_official/" // ✅ client Instagram profile
-    target="_blank"
-    rel="noopener noreferrer"
-    whileHover={{ scale: 1.2, color: "#FF8C00" }}
-    className="text-gray-300 hover:text-orange-400 transition-colors duration-300"
-  >
-    <Instagram size={24} />
-  </motion.a>
-  <motion.a
-    href="https://www.facebook.com/shanmugasundaram.swamynathan" // ✅ client Facebook profile
-    target="_blank"
-    rel="noopener noreferrer"
-    whileHover={{ scale: 1.2, color: "#FF8C00" }}
-    className="text-gray-300 hover:text-orange-400 transition-colors duration-300"
-  >
-    <Facebook size={24} />
-  </motion.a>
-  <motion.a
-    href="mailto:sss.pvdr1@gmail.com"
-    whileHover={{ scale: 1.2, color: "#FF8C00" }}
-    className="text-gray-300 hover:text-orange-400 transition-colors duration-300"
-  >
-    <Mail size={24} />
-  </motion.a>
-</div>
+            <motion.a
+              href="https://www.instagram.com/shanmuga_sundaram_official/"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.2, color: "#FF8C00" }}
+              className="text-gray-300 hover:text-orange-400 transition-colors duration-300"
+            >
+              <Instagram size={24} />
+            </motion.a>
+            <motion.a
+              href="https://www.facebook.com/shanmugasundaram.swamynathan"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.2, color: "#FF8C00" }}
+              className="text-gray-300 hover:text-orange-400 transition-colors duration-300"
+            >
+              <Facebook size={24} />
+            </motion.a>
+            <motion.a
+              href="mailto:sss.pvdr1@gmail.com"
+              whileHover={{ scale: 1.2, color: "#FF8C00" }}
+              className="text-gray-300 hover:text-orange-400 transition-colors duration-300"
+            >
+              <Mail size={24} />
+            </motion.a>
+          </div>
+
+          {/* Embedded Google Map */}
+          <div className="mt-6 w-full max-w-md">
+            <iframe
+              src="https://www.google.com/maps?q=141+Cherry+Road+Vincent+Salem+636007&output=embed"
+              width="100%"
+              height="200"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
           {/* Disclaimer */}
-          <p className="text-gray-400 text-sm text-center max-w-2xl">
+          <p className="text-gray-400 text-sm text-center max-w-2xl mt-4">
             Independent Star Health Insurance Executive — Not the official Star Health Insurance website.
           </p>
 
