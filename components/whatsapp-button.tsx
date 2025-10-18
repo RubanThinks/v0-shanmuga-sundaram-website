@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Image from "next/image"
+import { MessageCircle } from "lucide-react"
 
 export default function WhatsAppButton() {
   return (
@@ -16,17 +16,8 @@ export default function WhatsAppButton() {
       whileTap={{ scale: 0.95 }}
       className="fixed bottom-6 right-6 z-40 bg-green-500 hover:bg-green-600 rounded-full p-4 shadow-lg hover:shadow-green-400/50 transition-all duration-300"
     >
-      <motion.div
-        animate={{ scale: [1, 1.1, 1] }}
-        transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-      >
-        <Image
-          src="/WhatsApp.png" // your image in the public folder
-          alt="WhatsApp"
-          width={28}
-          height={28}
-          className="w-7 h-7" // ensures it fits nicely in the button
-        />
+      <motion.div animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}>
+        <MessageCircle className="text-white" size={28} />
       </motion.div>
     </motion.a>
   )
