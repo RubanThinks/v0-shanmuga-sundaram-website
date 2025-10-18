@@ -1,4 +1,5 @@
 "use client"
+"use client"
 
 import { motion } from "framer-motion"
 import { Award, Briefcase, Users } from "lucide-react"
