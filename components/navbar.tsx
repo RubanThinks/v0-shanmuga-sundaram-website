@@ -7,8 +7,10 @@ import { Menu, X } from "lucide-react"
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
+  // Updated nav items with About
   const navItems = [
     { label: "Home", href: "#home" },
+    { label: "About", href: "#executive" }, // About points to executive-section
     { label: "Policies", href: "#policies" },
     { label: "Contact", href: "#contact" },
   ]
@@ -21,16 +23,13 @@ export default function Navbar() {
       className="fixed top-0 w-full z-50 backdrop-blur-xl bg-blue-900/20 border-b border-white/10"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20 md:h-24"> {/* Increased height */}
+        <div className="flex justify-between items-center h-20 md:h-24">
 
           {/* Logo + Client Name + Tagline */}
           <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-3">
-            {/* Circular Icon with Initials */}
             <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-lg shadow-orange-400/50">
               <span className="text-white font-bold text-lg md:text-xl">SS</span>
             </div>
-
-            {/* Client Name + Tagline */}
             <div className="flex flex-col leading-tight">
               <span className="text-white font-bold text-lg md:text-2xl">
                 MR. Shanmuga Sundaram
@@ -83,4 +82,4 @@ export default function Navbar() {
       </div>
     </motion.nav>
   )
-                }
+}
