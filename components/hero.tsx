@@ -9,21 +9,25 @@ function TypingText({ text }: { text: string }) {
   const [displayedText, setDisplayedText] = useState("")
 
   useEffect(() => {
+    if (!text) return
     let index = 0
     const interval = setInterval(() => {
+      const char = text[index]             // store current char safely
       if (index < text.length) {
-        setDisplayedText((prev) => prev + text[index])
+        setDisplayedText((prev) => prev + char)
         index++
       } else {
-        clearInterval(interval)
+        clearInterval(interval)            // stop before adding undefined
       }
-    }, 50) // typing speed in ms
+    }, 50)
 
     return () => clearInterval(interval)
   }, [text])
 
   return (
-    <p className="text-base sm:text-xl text-gray-300 mb-4 leading-relaxed">{displayedText}</p>
+    <p className="text-base sm:text-xl text-gray-300 mb-4 leading-relaxed">
+      {displayedText}
+    </p>
   )
 }
 
@@ -70,7 +74,7 @@ export default function Hero() {
 
         {/* Typing Tagline */}
         <motion.div variants={itemVariants} className="mb-8 px-2">
-          <TypingText text="Helping clients secure the best health insurance plans for over 10 years." />
+          <TypingText text="Helping clients secure the best health insurance plans for over 10 years."/>
         </motion.div>
 
         {/* Stats */}
