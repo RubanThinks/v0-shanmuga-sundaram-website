@@ -21,17 +21,28 @@ export default function Navbar() {
       className="fixed top-0 w-full z-50 backdrop-blur-xl bg-blue-900/20 border-b border-white/10"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-lg shadow-orange-400/50">
-              <span className="text-white font-bold text-lg">SS</span>
+        <div className="flex justify-between items-center h-20 md:h-24"> {/* Increased height */}
+
+          {/* Logo + Client Name + Tagline */}
+          <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-3">
+            {/* Circular Icon with Initials */}
+            <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-lg shadow-orange-400/50">
+              <span className="text-white font-bold text-lg md:text-xl">SS</span>
             </div>
-            <span className="text-white font-bold hidden sm:inline">Shanmuga Sundaram</span>
+
+            {/* Client Name + Tagline */}
+            <div className="flex flex-col leading-tight">
+              <span className="text-white font-bold text-lg md:text-2xl">
+                MR. Shanmuga Sundaram
+              </span>
+              <span className="text-gray-300 text-xs md:text-sm">
+                Independent Star Health Insurance Executive
+              </span>
+            </div>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-8">
+          <div className="hidden md:flex gap-8 items-center">
             {navItems.map((item) => (
               <motion.a
                 key={item.label}
@@ -46,7 +57,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-white">
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
 
@@ -72,4 +83,4 @@ export default function Navbar() {
       </div>
     </motion.nav>
   )
-}
+                }
