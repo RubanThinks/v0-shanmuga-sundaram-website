@@ -40,7 +40,7 @@ export default function Hero() {
       variants={itemVariants}
       className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-snug sm:leading-tight break-words"
     >
-      Your Trusted Health Insurance{" "}
+      Your Trusted Star Health Insurance{" "}
       <span className="text-orange-400 block sm:inline">Expert</span>
     </motion.h1>
 
