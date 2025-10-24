@@ -23,7 +23,7 @@ export default function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    const mailtoLink = `mailto:sss.pvdr1@gmail.com?subject=Health Insurance Inquiry from ${formData.name}&body=Name: ${formData.name}%0DEmail: ${formData.email}%0DPhone: ${formData.phone}%0D%0DMessage:%0D${formData.message}`
+    const mailtoLink = `mailto:healthinsurancetnsss@gmail.com?subject=Health Insurance Inquiry from ${formData.name}&body=Name: ${formData.name}%0DEmail: ${formData.email}%0DPhone: ${formData.phone}%0D%0DMessage:%0D${formData.message}`
 
     window.location.href = mailtoLink
     setSubmitted(true)
@@ -77,8 +77,8 @@ export default function ContactSection() {
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-2">Email</h3>
-                <a href="mailto:sss.pvdr1@gmail.com" className="text-gray-300 hover:text-orange-400 transition-colors">
-                  sss.pvdr1@gmail.com
+                <a href="mailto:healthinsurancetnsss@gmail.com" className="text-gray-300 hover:text-orange-400 transition-colors">
+                  healthinsurancetnsss@gmail.com
                 </a>
               </div>
             </div>
