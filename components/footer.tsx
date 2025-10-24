@@ -36,7 +36,7 @@ export default function Footer() {
               <Facebook size={24} />
             </motion.a>
             <motion.a
-              href="mailto:sss.pvdr1@gmail.com"
+              href="mailto:healthinsurancetnsss@gmail.com"
               whileHover={{ scale: 1.2, color: "#FF8C00" }}
               className="text-gray-300 hover:text-orange-400 transition-colors duration-300"
             >
